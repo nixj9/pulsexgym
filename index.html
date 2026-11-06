@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse X Gym | Kfarhata, Zgharta</title>
+<meta name="description" content="Pulse X Gym in Kfarhata, Zgharta. Full gym floor, functional studio, shake and supplement bar. Message us on WhatsApp to join.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070707; --bg2:#0f0f10; --card:#151516; --line:#232325;
+    --silver:#d6d6d9; --silver2:#9a9aa0; --text:#ececef; --muted:#9a9aa0;
+    --accent:#ff2d2d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1100px,92%);margin:0 auto}
+  h1,h2,h3,.logo{font-family:"Bebas Neue",Impact,sans-serif;letter-spacing:.04em;font-weight:400}
+  .logo{font-size:30px;background:linear-gradient(180deg,#fff 0%,#c9c9ce 45%,#7d7d84 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo span{color:var(--accent);-webkit-text-fill-color:var(--accent)}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(7,7,7,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  nav{display:flex;gap:26px;font-size:14px;color:var(--muted);font-weight:500}
+  nav a:hover{color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:.2s}
+  .btn-primary{background:#25d366;color:#031;}
+  .btn-primary:hover{background:#2ee46f}
+  .btn-ghost{border:1px solid var(--silver2);color:var(--silver)}
+  .btn-ghost:hover{border-color:#fff;color:#fff}
+  header .btn{padding:9px 16px}
+  @media (max-width:760px){nav{display:none}}
+
+  .hero{position:relative;overflow:hidden;padding:110px 0 90px;border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(900px 400px at 15% 0%,rgba(255,45,45,.14),transparent 60%),
+      radial-gradient(700px 500px at 90% 100%,rgba(214,214,217,.08),transparent 60%),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 80px),
+      var(--bg)}
+  .hero h1{font-size:clamp(64px,11vw,140px);line-height:.92;
+    background:linear-gradient(180deg,#fff 0%,#cfcfd4 50%,#6f6f76 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero h1 span{-webkit-text-fill-color:var(--accent);color:var(--accent)}
+  .kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+  .hero p{max-width:560px;color:var(--muted);font-size:18px;margin:22px 0 34px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  section{padding:90px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:40px}
+  h2{font-size:clamp(40px,6vw,64px);line-height:1;color:var(--silver)}
+  .sec-head p{color:var(--muted);max-width:420px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;transition:.25s}
+  .card:hover{border-color:var(--silver2);transform:translateY(-3px)}
+  .card .ic{width:44px;height:44px;border-radius:10px;background:#1e1e20;display:grid;place-items:center;margin-bottom:18px;color:var(--silver)}
+  .card h3{font-size:26px;margin-bottom:8px;color:#fff}
+  .card p{color:var(--muted);font-size:15px}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:40px}
+  .stat{border-left:2px solid var(--accent);padding:6px 0 6px 18px}
+  .stat b{display:block;font-family:"Bebas Neue",Impact,sans-serif;font-size:44px;line-height:1;color:#fff}
+  .stat span{color:var(--muted);font-size:14px}
+
+  .join{background:var(--bg2)}
+  .join-box{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .join ul{list-style:none;margin:20px 0 30px;color:var(--muted)}
+  .join li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+  .join li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px;flex:none}
+  .wa{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px;text-align:center}
+  .wa .num{font-family:"Bebas Neue",Impact,sans-serif;font-size:40px;color:#fff;letter-spacing:.06em;margin:10px 0 6px}
+  .wa small{color:var(--muted);display:block;margin-bottom:22px}
+  @media (max-width:820px){.join-box{grid-template-columns:1fr}}
+
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .loc .map{border:1px solid var(--line);border-radius:16px;min-height:260px;background:
+      radial-gradient(circle at 50% 50%,rgba(255,45,45,.25),transparent 35%),
+      repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 40px),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 40px),#0c0c0d;
+      display:grid;place-items:center;color:var(--silver)}
+  .loc .map .pin{text-align:center}
+  .loc .map .pin svg{display:block;margin:0 auto 10px}
+  .loc dl{display:grid;grid-template-columns:120px 1fr;gap:12px 20px;color:var(--muted);margin:20px 0 28px}
+  .loc dt{color:var(--silver);font-weight:600}
+  @media (max-width:820px){.loc{grid-template-columns:1fr}}
+
+  footer{padding:34px 0;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer .social{display:flex;gap:18px}
+  footer .social a:hover{color:#fff}
+
+  .fab{position:fixed;right:18px;bottom:18px;z-index:20;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">PULSE<span>X</span></a>
+    <nav>
+      <a href="#about">The Gym</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#join">Join</a>
+      <a href="#location">Location</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/96176471885" target="_blank" rel="noopener">WhatsApp us</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="kicker">Kfarhata, Zgharta</div>
+    <h1>Train<br>Harder.<br>Pulse <span>X</span>.</h1>
+    <p>A full gym floor, a functional studio and a shake bar under one roof in Zgharta. Serious equipment, a dark focused space, and a community that shows up.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://wa.me/96176471885?text=Hi%20Pulse%20X%2C%20I%27d%20like%20to%20join%20the%20gym." target="_blank" rel="noopener">Join on WhatsApp</a>
+      <a class="btn btn-ghost" href="#facilities">See the gym</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Built for people<br>who actually train</h2>
+      <p>Pulse X is Zgharta's gym for strength, conditioning and everyday fitness. Whether you are starting out or chasing a PR, you will find the space and the kit to do it properly.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>2</b><span>Training halls: main floor plus a dedicated studio</span></div>
+      <div class="stat"><b>Full</b><span>Free weights, machines and cardio</span></div>
+      <div class="stat"><b>1</b><span>Shake and supplement bar at the entrance</span></div>
+      <div class="stat"><b>All</b><span>Levels welcome, men and women</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="facilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Facilities</h2>
+      <p>Everything on one level, laid out so you can move from warm up to lift to cooldown without wasting a minute.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></div>
+        <h3>Main Gym Floor</h3>
+        <p>Racks, benches, plate loaded and selectorised machines, dumbbells and cardio, all in a wide open hall with natural light along two full glass walls.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-3 7M12 13l3 7M8 10l4-2 4 2"/></svg></div>
+        <h3>Functional Studio</h3>
+        <p>A separate hall for group classes, functional circuits, mobility and personal training sessions away from the main floor.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3h8l-1 18H9L8 3zM7 8h10"/></svg></div>
+        <h3>Shake &amp; Supplement Bar</h3>
+        <p>Protein shakes, drinks and supplements right at the entrance so you can refuel before you leave.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M7 9h2M15 9h2"/></svg></div>
+        <h3>Changing Rooms</h3>
+        <p>Separate men's and women's changing rooms and bathrooms, with secure gate access to the training floor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join" class="join">
+  <div class="wrap join-box">
+    <div>
+      <h2>Join Pulse X</h2>
+      <ul>
+        <li>Monthly and longer memberships available</li>
+        <li>Personal training and studio classes</li>
+        <li>Free first visit: come in, see the floor, meet the team</li>
+        <li>Members are managed through our gym app, so check in is quick</li>
+      </ul>
+      <p style="color:var(--muted)">Message us on WhatsApp for current plans, prices and opening hours. We reply fast.</p>
+    </div>
+    <div class="wa">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+      <div class="num">+961 76 471 885</div>
+      <small>WhatsApp and calls</small>
+      <a class="btn btn-primary" href="https://wa.me/96176471885?text=Hi%20Pulse%20X%2C%20I%27d%20like%20to%20know%20your%20membership%20plans." target="_blank" rel="noopener">Ask about memberships</a>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap loc">
+    <div>
+      <h2>Find us</h2>
+      <dl>
+        <dt>Address</dt><dd>Kfarhata, Zgharta, North Lebanon</dd>
+        <dt>Phone</dt><dd>+961 76 471 885</dd>
+        <dt>Instagram</dt><dd>@pulse.x.gym</dd>
+      </dl>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Pulse+X+Gym+Kfarhata+Zgharta+Lebanon" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+    <a class="map" href="https://www.google.com/maps/search/?api=1&query=Pulse+X+Gym+Kfarhata+Zgharta+Lebanon" target="_blank" rel="noopener">
+      <div class="pin">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="#ff2d2d"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        Kfarhata, Zgharta<br><small style="color:var(--muted)">Tap for directions</small>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" style="font-size:24px">PULSE<span>X</span></div>
+    <div class="social">
+      <a href="https://instagram.com/pulse.x.gym" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/96176471885" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#top">Back to top</a>
+    </div>
+    <div>&copy; <span id="yr">2026</span> Pulse X Gym, Zgharta</div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/96176471885" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#052e16"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
